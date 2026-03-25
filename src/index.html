@@ -4,13 +4,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
   <title>Mari Lee Lumberg - new vanilla app</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      padding: 2rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .photo-spot {
+      aspect-ratio: 4 / 3;
+      border: 2px dashed #bbb;
+      border-radius: 12px;
+      background: #e9e9e9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-size: 0.95rem;
+      overflow: hidden;
+    }
+
+    .photo-spot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .photo-spot .placeholder-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <main>
     <h1>Mari Lee Lumberg - app</h1>
+
+    <div class="photo-grid">
+
+      <div class="photo-spot">
+
+        <img src="485589.jpg" alt ="cute_cat">
+      </div>
+
+      <div class="photo-spot">
+        <img src="th.jpg" alt ="cute_cat">
+      </div>
+
+      <div class="photo-spot">
+        <img src="pexels-photo-34288911.jpeg" alt ="cute_cat">
+      </div>
+
+      <div class="photo-spot">
+        <img src="pexels-photo-35517167.jpeg" alt ="cute_cat">
+      </div>
+
+    </div>
   </main>
 </body>
 
